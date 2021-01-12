@@ -37,10 +37,10 @@ def talker():
         gray_cv2_frame = cv2.cvtColor(cv2_frame, cv2.COLOR_BGR2GRAY)
 
         # Converter a img cv2 em img ROS
-        ros_frame = bridge.cv2_to_imgmsg(gray_cv2_frame, "bgr8")
+        ros_frame = bridge.cv2_to_imgmsg(gray_cv2_frame, "mono8")
     
         # Publicacao da img no topico
-        rospy.loginfo(ros_frame)    
+        print('[info] imagem sendo publicada')    
         pub.publish(ros_frame)
 
 # Funcao main
