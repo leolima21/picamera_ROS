@@ -37,7 +37,7 @@ def talker():
         ros_frame = bridge.cv2_to_imgmsg(cv2_frame, "bgr8")
     
         # Publicacao da img no topico
-        rospy.loginfo(ros_frame)    
+        print('[info] imagem sendo publicada')  
         pub.publish(ros_frame)
 
 # Funcao main
